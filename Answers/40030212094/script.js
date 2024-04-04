@@ -72,8 +72,13 @@ function exHanoi_2(A, B, C, D, n) {
 }
 
 function exhanoi_3(A, B, C, n) {
-    alert("your function is not complete")
-    return
+    let i = 0;
+    while (i < n) {
+        hanoi(A, C, B, i * 3)
+        hanoi(B, C, A, i * 3 + 2);
+        i++;
+    }
+    hanoi(A, B, C, 3 * n);
 
 }
 
